@@ -62,11 +62,16 @@
       <version>0.12.5</version>
       <scope>runtime</scope>
     </dependency>
-<dependency>
-<groupId>io.github.cdimascio</groupId>
-<artifactId>dotenv-java</artifactId>
-<version>3.0.0</version>
-</dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>io.github.cdimascio</groupId>
+      <artifactId>dotenv-java</artifactId>
+      <version>3.0.0</version>
+    </dependency>
   </dependencies>
   <build>
     <directory>${env.TEMP}/leave-management-backend-build</directory>

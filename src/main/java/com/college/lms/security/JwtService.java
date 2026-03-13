@@ -1,12 +1,12 @@
 package com.college.lms.security;
 
+import com.college.lms.config.JwtProperties;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import javax.crypto.SecretKey;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -14,12 +14,9 @@ public class JwtService {
   private final SecretKey secretKey;
   private final long expirationMs;
 
-  public JwtService(
-      @Value("${app.jwt.secret}") String secret,
-      @Value("${app.jwt.expiration-ms}") long expirationMs
-  ) {
-    this.secretKey = Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
-    this.expirationMs = expirationMs;
+  public JwtService(JwtProperties jwtProperties) {
+    this.secretKey = Keys.hmacShaKeyFor(jwtProperties.getSecret().getBytes(StandardCharsets.UTF_8));
+    this.expirationMs = jwtProperties.getExpirationMs();
   }
 
   public String generateToken(String username, String role) {
