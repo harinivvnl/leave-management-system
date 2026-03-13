@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.5.11</version>
+    <version>3.2.5</version>
     <relativePath/>
   </parent>
 
@@ -69,6 +69,7 @@
 </dependency>
   </dependencies>
   <build>
+    <directory>${env.TEMP}/leave-management-backend-build</directory>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>

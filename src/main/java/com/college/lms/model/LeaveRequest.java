@@ -1,5 +1,6 @@
 package com.college.lms.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -33,6 +34,7 @@ public class LeaveRequest {
 
   private String department;
 
+  @Column(name = "academic_year")
   private String year;
 
   private LocalDate fromDate;

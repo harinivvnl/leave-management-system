@@ -28,7 +28,7 @@ public class User {
   @Column
   private String section;
 
-  @Column
+  @Column(name = "academic_year")
   private String year;
 
   @Enumerated(EnumType.STRING)
