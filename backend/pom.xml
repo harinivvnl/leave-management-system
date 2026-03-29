@@ -74,7 +74,6 @@
     </dependency>
   </dependencies>
   <build>
-    <directory>${env.TEMP}/leave-management-backend-build</directory>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
