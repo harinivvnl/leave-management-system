@@ -1,0 +1,4 @@
+frontend/node_modules/
+backend/target/
+backend/.git.nested.bak/
+frontend/.git.nested.bak/
