@@ -1,3 +1,0 @@
-sql:
-mysql -h mysql-3a83be30-hv-b6d5.g.aivencloud.com -P 11674 -u avnadmin -p defaultdb
-[redacted]
